@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SIH_FINAL_1</string>
+
+    <string-array name="languages">
+        <item>C</item>
+        <item>C++</item>
+        <item>Java</item>
+        <item>Python</item>
+        <item>Karthi</item>
+    </string-array>
+
+    <string name="facebook_app_id">1234</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">56789</string>
+</resources>
