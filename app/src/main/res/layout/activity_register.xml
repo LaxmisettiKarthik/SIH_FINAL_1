@@ -6,68 +6,81 @@
     android:layout_height="match_parent"
     tools:context=".RegisterActivity">
 
+
     <TextView
         android:id="@+id/banner"
-        android:layout_width="176dp"
-        android:layout_height="35dp"
-        android:text="Registration"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="180dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/leckerli_one"
+        android:text="Sign Up"
+        android:textColor="#5A76AA"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="@+id/registerAnimation"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/registerAnimation"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/email1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Email"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.308"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/banner" />
+        app:layout_constraintEnd_toEndOf="@+id/registerAnimation"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="@+id/registerAnimation"
+        app:layout_constraintTop_toBottomOf="@+id/registerAnimation" />
 
     <Button
         android:id="@+id/register1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="148dp"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="#1A83AC"
         android:text="register"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.386"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/ConfirmPassword"
+        app:layout_constraintStart_toStartOf="@+id/ConfirmPassword" />
 
     <EditText
         android:id="@+id/password1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="password"
+        android:hint="Password"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/register1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.308"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/email1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/email1"
         app:layout_constraintTop_toBottomOf="@+id/email1"
-        app:layout_constraintVertical_bias="0.059" />
+        app:layout_constraintVertical_bias="0.244" />
 
-    <Button
-        android:id="@+id/verifyMobile"
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/registerAnimation"
+        android:layout_width="313dp"
+        android:layout_height="310dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/banner"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/registration" />
+
+    <EditText
+        android:id="@+id/ConfirmPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="Verify Mobile"
-        app:layout_constraintBottom_toTopOf="@+id/register1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.372"
-        app:layout_constraintStart_toStartOf="parent"
+        android:ems="10"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/password1"
+        app:layout_constraintStart_toStartOf="@+id/password1"
         app:layout_constraintTop_toBottomOf="@+id/password1" />
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

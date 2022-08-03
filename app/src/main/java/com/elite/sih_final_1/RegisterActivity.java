@@ -13,20 +13,21 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-
+//import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthCredential;
+//import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.GoogleAuthProvider;
+//import com.google.firebase.auth.GoogleAuthProvider;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseAuth mAuth;
     private TextView banner;
-    private EditText editTextEmail, editTextPassword;
-    private Button registerUser,verifyMobile;
+    private EditText editTextEmail, editTextPassword,confirmpassword;
+    private Button registerUser;
+   // private LottieAnimationView lottie;
 
 
     @Override
@@ -35,9 +36,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_register);
 
 
-        mAuth = FirebaseAuth.getInstance();
-        verifyMobile = findViewById(R.id.verifyMobile);
-        verifyMobile.setOnClickListener(this);
+      //  lottie = findViewById(R.id.registerAnimation);
+
+        mAuth = FirebaseAuth.getInstance(); 
+
 
         banner = findViewById(R.id.banner);
         banner.setOnClickListener(this);
@@ -46,6 +48,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         editTextEmail = findViewById(R.id.email1);
         editTextPassword = findViewById(R.id.password1);
+        confirmpassword = findViewById(R.id.ConfirmPassword);
 
 
     }
@@ -66,6 +69,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private void registerUser () {
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
+        String cpassword = confirmpassword.getText().toString().trim();
 
         if (email.isEmpty()) {
             editTextEmail.setError("email is required");
@@ -88,6 +92,12 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             editTextPassword.requestFocus();
             return;
         }
+        if(!password.equals(cpassword)){
+            confirmpassword.setError("Password hasn't matched");
+            confirmpassword.requestFocus();
+            return;
+        }
+
 
 
         mAuth.createUserWithEmailAndPassword(email, password)
