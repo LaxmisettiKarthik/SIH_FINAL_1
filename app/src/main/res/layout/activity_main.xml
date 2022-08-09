@@ -10,73 +10,89 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="WELCOME TO OUR APP"
-        app:layout_constraintBottom_toTopOf="@+id/email"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="190dp"
+        android:fontFamily="@font/leckerli_one"
+        android:text="Log In"
+        android:textColor="#5A76AA"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <EditText
         android:id="@+id/email"
-        android:layout_width="392dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="156dp"
+        android:layout_width="241dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="292dp"
         android:ems="10"
         android:hint="Email"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.079"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/loginAnimation"
+        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintStart_toStartOf="@+id/loginAnimation"
+        app:layout_constraintTop_toTopOf="@+id/loginAnimation" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loginAnimation"
+        android:layout_width="357dp"
+        android:layout_height="310dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.146"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/login" />
 
     <Button
         android:id="@+id/signIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginBottom="120dp"
-        android:text="SIGN IN"
-        app:layout_constraintBottom_toTopOf="@+id/forgotPassword"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:backgroundTint="#335A9C"
+        android:text="LOG IN"
+        app:layout_constraintEnd_toStartOf="@+id/register"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="@+id/password"
+        app:layout_constraintTop_toTopOf="@+id/register" />
 
     <Button
         android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="260dp"
-        android:text="REGISTER"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#335A9C"
+        android:text="SIGN UP"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.42"
-        app:layout_constraintStart_toEndOf="@+id/signIn" />
+        app:layout_constraintEnd_toEndOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/forgotPassword"
+        app:layout_constraintVertical_bias="0.407" />
 
     <TextView
         android:id="@+id/forgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="124dp"
+        android:layout_marginTop="8dp"
         android:text="ForgotPassword?"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        app:layout_constraintEnd_toEndOf="@+id/password"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="387dp"
-        android:layout_height="54dp"
+        android:layout_width="241dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/signIn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
-        app:layout_constraintVertical_bias="0.158" />
+        app:layout_constraintEnd_toEndOf="@+id/email"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

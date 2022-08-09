@@ -25,24 +25,25 @@
         android:id="@+id/email1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="284dp"
         android:ems="10"
         android:hint="Email"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/registerAnimation"
-        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="@+id/registerAnimation"
-        app:layout_constraintTop_toBottomOf="@+id/registerAnimation" />
+        app:layout_constraintTop_toTopOf="@+id/registerAnimation" />
 
     <Button
         android:id="@+id/register1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="96dp"
         android:backgroundTint="#1A83AC"
         android:text="register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/ConfirmPassword"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="@+id/ConfirmPassword" />
 
     <EditText
@@ -63,7 +64,7 @@
         android:id="@+id/registerAnimation"
         android:layout_width="313dp"
         android:layout_height="310dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/banner"

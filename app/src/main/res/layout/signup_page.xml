@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:weightSum="4"
+    android:background="#BE0BACB1">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/ugclogo"
+            android:layout_width="135dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="30dp"
+
+            android:backgroundTint="#BE0BACB1"
+            android:src="@drawable/image" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignBaseline="@id/ugclogo"
+            android:layout_marginLeft="120dp"
+
+            android:layout_marginRight="8dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="UGC          Department of Higher Education"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" connect with us! 🤝"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="@drawable/cardbackground"
+        android:elevation="36dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:text="Sign Up"
+            android:textColor="@color/black"
+            android:textSize="28dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="210dp"
+
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/signup_emailid"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginLeft="48dp"
+                android:layout_marginRight="48dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableEnd="@drawable/email"
+                android:drawableTint="@color/black"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textPersonName"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/signup_password"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginLeft="48dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="48dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableEnd="@drawable/confirmpassword"
+                android:drawableTint="@color/black"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/signup_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginLeft="48dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="48dp"
+                android:background="@drawable/edit_text_background"
+                android:drawableEnd="@drawable/confirmpassword"
+                android:drawableTint="@color/black"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loginAnimation"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="73dp"
+            android:layout_marginTop="-24dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginBottom="-18dp"
+            android:outlineAmbientShadowColor="@color/black"
+            app:layout_constraintHorizontal_bias="0.146"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/registration"
+            app:lottie_speed="0.5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:layout_marginTop="410dp"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
+
+            <Button
+                android:id="@+id/signupbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/signupbuttonpage"
+                android:paddingLeft="10dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="20dp"
+                android:text="Sign up"
+                android:background="@color/signupbuttonpage"/>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+
+

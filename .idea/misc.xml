@@ -3,11 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/SIH_FINAL_1/app/src/main/res/drawable/button_background.xml" value="0.125" />
+        <entry key="..\:/SIH_FINAL_1/app/src/main/res/drawable/cardbackground.xml" value="0.125" />
+        <entry key="..\:/SIH_FINAL_1/app/src/main/res/drawable/edit_text_background.xml" value="0.125" />
         <entry key="..\:/SIH_FINAL_1/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.1215" />
+        <entry key="..\:/SIH_FINAL_1/app/src/main/res/drawable/signup_button_background.xml" value="0.102" />
+        <entry key="..\:/SIH_FINAL_1/app/src/main/res/drawable/signup_page_button_background.xml" value="0.125" />
         <entry key="..\:/SIH_FINAL_1/app/src/main/res/layout/activity_forgot_password.xml" value="0.21041666666666667" />
         <entry key="..\:/SIH_FINAL_1/app/src/main/res/layout/activity_main.xml" value="0.22447916666666667" />
         <entry key="..\:/SIH_FINAL_1/app/src/main/res/layout/activity_profile.xml" value="0.21041666666666667" />
         <entry key="..\:/SIH_FINAL_1/app/src/main/res/layout/activity_register.xml" value="0.22" />
+        <entry key="..\:/SIH_FINAL_1/app/src/main/res/layout/cardbackgroud.xml" value="0.18333333333333332" />
+        <entry key="..\:/SIH_FINAL_1/app/src/main/res/layout/login.xml" value="0.25" />
+        <entry key="..\:/SIH_FINAL_1/app/src/main/res/layout/loginpage.xml" value="0.14629629629629629" />
+        <entry key="..\:/SIH_FINAL_1/app/src/main/res/layout/signup_page.xml" value="0.15492957746478872" />
+        <entry key="..\:/SIH_FINAL_1/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.125" />
       </map>
     </option>
   </component>

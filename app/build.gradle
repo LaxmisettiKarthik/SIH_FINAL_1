@@ -3,6 +3,7 @@ plugins {
     id 'com.google.gms.google-services'
 }
 
+
 android {
     compileSdk 32
 
@@ -55,4 +56,6 @@ dependencies {
 //country code picker for OTP Signup
     implementation 'com.hbb20:ccp:2.6.1'
 
+//razorpay gateway dependency
+    implementation 'com.razorpay:checkout:1.6.23'
 }

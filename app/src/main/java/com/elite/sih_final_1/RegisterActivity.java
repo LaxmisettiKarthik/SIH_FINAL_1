@@ -2,64 +2,61 @@ package com.elite.sih_final_1;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-
-//import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-//import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-//import com.google.firebase.auth.GoogleAuthProvider;
+
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
     private FirebaseAuth mAuth;
-    private TextView banner;
+    //private TextView banner;
     private EditText editTextEmail, editTextPassword,confirmpassword;
     private Button registerUser;
-   // private LottieAnimationView lottie;
-
+    Window window;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.signup_page);
 
-
-      //  lottie = findViewById(R.id.registerAnimation);
+       //to set status bar colour
+       window=this.getWindow();
+       window.setStatusBarColor(this.getResources().getColor(R.color.signupbuttonpage));
+       //end of status bar
 
         mAuth = FirebaseAuth.getInstance(); 
 
+       // banner = findViewById(R.id.banner);
+       // banner.setOnClickListener(this);
 
-        banner = findViewById(R.id.banner);
-        banner.setOnClickListener(this);
-        registerUser = findViewById(R.id.register1);
+        registerUser = findViewById(R.id.signupbtn);
         registerUser.setOnClickListener(this);
 
-        editTextEmail = findViewById(R.id.email1);
-        editTextPassword = findViewById(R.id.password1);
-        confirmpassword = findViewById(R.id.ConfirmPassword);
-
+        editTextEmail = findViewById(R.id.signup_emailid);
+        editTextPassword = findViewById(R.id.signup_password);
+        confirmpassword = findViewById(R.id.signup_confirm_password);
 
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.banner:
-                startActivity(new Intent(this, MainActivity.class));
-                break;
-            case R.id.register1:
+//            case R.id.banner:
+//                startActivity(new Intent(this, MainActivity.class));
+//                break;
+            case R.id.signupbtn:
                 registerUser();
                 break;
 
@@ -113,8 +110,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                         }
                     }
                 });
-
-
 
     }
 }
